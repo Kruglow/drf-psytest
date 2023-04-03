@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Результаты теста</h1>
+      <p>Ваша оценка: {{ score }}</p>
+
+      <h2>Интерпретации</h2>
+      {% for interpretation in interpretations %}
+        <p>{{ interpretation.text }}</p>
+      {% endfor %}
+{% endblock %}

@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'restapi'
+    'psytest',
+    'rest_framework',
 
 ]
 
@@ -57,7 +58,9 @@ ROOT_URLCONF = 'restapi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),
+                os.path.join(BASE_DIR, 'psytest', 'templates', 'psytest'),
+                 ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

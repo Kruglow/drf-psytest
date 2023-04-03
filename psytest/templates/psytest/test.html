@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ test.name }}</h1>
+<p>{{ test.description }}</p>
+
+<form method="post" action="{% url 'result_view' test.id %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-primary">Отправить ответы</button>
+</form>
+{% endblock %}
+
+
